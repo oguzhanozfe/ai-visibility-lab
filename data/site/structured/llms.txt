@@ -1,0 +1,17 @@
+# Northvale Desk
+
+> Plain answers about Northvale town services.
+
+## Pages
+- [How long does a passport renewal take in Northvale](https://structured.example/passport-renewal.html)
+- [From what age can a child get a Northvale library card](https://structured.example/library-card.html)
+- [How often does the N4 night bus run in Northvale](https://structured.example/night-bus.html)
+- [When is glass collected for recycling in Northvale](https://structured.example/glass-recycling.html)
+- [How much is a residential parking permit in Northvale](https://structured.example/parking-permit.html)
+- [What is the time limit for the Northvale Marathon](https://structured.example/marathon.html)
+- [How hard is Northvale tap water](https://structured.example/tap-water.html)
+- [When is the Harbor Museum in Northvale open](https://structured.example/harbor-museum.html)
+- [How much does the Northvale bike share cost](https://structured.example/bike-share.html)
+- [What is the school enrolment deadline in Northvale](https://structured.example/school-enrolment.html)
+- [When is the last ferry back from Gull Island in winter](https://structured.example/gull-island-ferry.html)
+- [When is construction work allowed in Northvale](https://structured.example/construction-noise.html)

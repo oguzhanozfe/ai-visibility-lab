@@ -1,0 +1,554 @@
+{
+ "retrieval": [
+  {
+   "slug": "passport-renewal",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "library-card",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "night-bus",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "glass-recycling",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "parking-permit",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "marathon",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "tap-water",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "harbor-museum",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "bike-share",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "school-enrolment",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "gull-island-ferry",
+   "baseline": 2,
+   "structured": 1
+  },
+  {
+   "slug": "construction-noise",
+   "baseline": 2,
+   "structured": 1
+  }
+ ],
+ "generation": {
+  "qwen3.5:9b": [
+   {
+    "slug": "passport-renewal",
+    "baseline_first": true,
+    "answer": "A standard passport renewal in Northvale takes 18 working days, while the express service takes 5 working days.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "passport-renewal",
+    "baseline_first": false,
+    "answer": "A standard passport renewal in Northvale takes 18 working days, while the express service takes 5 working days.",
+    "cited_baseline": false,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "library-card",
+    "baseline_first": true,
+    "answer": "Children can get their own Northvale library card from age 7.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "library-card",
+    "baseline_first": false,
+    "answer": "",
+    "cited_baseline": false,
+    "cited_structured": false,
+    "cited_distractor": false,
+    "empty": true,
+    "correct": false
+   },
+   {
+    "slug": "night-bus",
+    "baseline_first": true,
+    "answer": "The N4 night bus runs every 25 minutes between 23:30 and 04:10 in Northvale [2, 3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "night-bus",
+    "baseline_first": false,
+    "answer": "",
+    "cited_baseline": false,
+    "cited_structured": false,
+    "cited_distractor": false,
+    "empty": true,
+    "correct": false
+   },
+   {
+    "slug": "glass-recycling",
+    "baseline_first": true,
+    "answer": "",
+    "cited_baseline": false,
+    "cited_structured": false,
+    "cited_distractor": false,
+    "empty": true,
+    "correct": false
+   },
+   {
+    "slug": "glass-recycling",
+    "baseline_first": false,
+    "answer": "Glass is collected on the second Tuesday of every month in Northvale [2][3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "parking-permit",
+    "baseline_first": true,
+    "answer": "A residential parking permit in Northvale costs 42 NVD per year.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "parking-permit",
+    "baseline_first": false,
+    "answer": "A residential parking permit in Northvale costs 42 NVD per year.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "marathon",
+    "baseline_first": true,
+    "answer": "",
+    "cited_baseline": false,
+    "cited_structured": false,
+    "cited_distractor": false,
+    "empty": true,
+    "correct": false
+   },
+   {
+    "slug": "marathon",
+    "baseline_first": false,
+    "answer": "Runners must finish within 6 hours 30 minutes for the 2027 Northvale Marathon.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "tap-water",
+    "baseline_first": true,
+    "answer": "Northvale tap water has a hardness of 182 mg/L, which is classed as moderately hard [2][3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "tap-water",
+    "baseline_first": false,
+    "answer": "Northvale tap water has a hardness of 182 mg/L, which is classed as moderately hard [2][3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "harbor-museum",
+    "baseline_first": true,
+    "answer": "",
+    "cited_baseline": false,
+    "cited_structured": false,
+    "cited_distractor": false,
+    "empty": true,
+    "correct": false
+   },
+   {
+    "slug": "harbor-museum",
+    "baseline_first": false,
+    "answer": "The Harbor Museum in Northvale is open from 10:00 to 17:00, closed on Mondays, and free on the first Sunday of each month [2][3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "bike-share",
+    "baseline_first": true,
+    "answer": "The first 30 minutes of a bike share ride are free, after which each 15 minutes costs 1.5 NVD.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "bike-share",
+    "baseline_first": false,
+    "answer": "",
+    "cited_baseline": false,
+    "cited_structured": false,
+    "cited_distractor": false,
+    "empty": true,
+    "correct": false
+   },
+   {
+    "slug": "school-enrolment",
+    "baseline_first": true,
+    "answer": "The school enrolment deadline in Northvale is 14 March.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "school-enrolment",
+    "baseline_first": false,
+    "answer": "The school enrolment deadline in Northvale is 14 March [2][3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "gull-island-ferry",
+    "baseline_first": true,
+    "answer": "The last winter return ferry leaves at 19:45.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "gull-island-ferry",
+    "baseline_first": false,
+    "answer": "The last winter return ferry from Gull Island leaves at 19:45.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "construction-noise",
+    "baseline_first": true,
+    "answer": "Construction work is allowed from 08:00 to 18:00 on weekdays and from 09:00 to 13:00 on Saturdays in Northvale.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "construction-noise",
+    "baseline_first": false,
+    "answer": "Construction work is allowed from 08:00 to 18:00 on weekdays and from 09:00 to 13:00 on Saturdays.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   }
+  ],
+  "qwen3.5:4b": [
+   {
+    "slug": "passport-renewal",
+    "baseline_first": true,
+    "answer": "A standard passport renewal takes 18 working days, while the express service takes 5 working days.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "passport-renewal",
+    "baseline_first": false,
+    "answer": "A standard passport renewal in Northvale takes 18 working days, while the express service takes 5 working days.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "library-card",
+    "baseline_first": true,
+    "answer": "Children can get their own Northvale library card from age 7.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "library-card",
+    "baseline_first": false,
+    "answer": "Children can get their own Northvale library card from age 7.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "night-bus",
+    "baseline_first": true,
+    "answer": "The N4 night bus runs every 25 minutes between 23:30 and 04:10 [2, 3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "night-bus",
+    "baseline_first": false,
+    "answer": "The N4 night bus runs every 25 minutes between 23:30 and 04:10.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "glass-recycling",
+    "baseline_first": true,
+    "answer": "Glass is collected on the second Tuesday of every month.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "glass-recycling",
+    "baseline_first": false,
+    "answer": "Glass is collected on the second Tuesday of every month [2, 3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "parking-permit",
+    "baseline_first": true,
+    "answer": "A residential parking permit in Northvale costs 42 NVD per year.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "parking-permit",
+    "baseline_first": false,
+    "answer": "A residential parking permit costs 42 NVD per year.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "marathon",
+    "baseline_first": true,
+    "answer": "Runners must finish within 6 hours 30 minutes for the Northvale Marathon.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "marathon",
+    "baseline_first": false,
+    "answer": "Runners must finish within 6 hours 30 minutes.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "tap-water",
+    "baseline_first": true,
+    "answer": "",
+    "cited_baseline": false,
+    "cited_structured": false,
+    "cited_distractor": false,
+    "empty": true,
+    "correct": false
+   },
+   {
+    "slug": "tap-water",
+    "baseline_first": false,
+    "answer": "Northvale tap water has a hardness of 182 mg/L, which is classed as moderately hard [2][3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "harbor-museum",
+    "baseline_first": true,
+    "answer": "The Harbor Museum in Northvale is open from 10:00 to 17:00 and is closed on Mondays.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "harbor-museum",
+    "baseline_first": false,
+    "answer": "The Harbor Museum in Northvale is open from 10:00 to 17:00, closed on Mondays, and free on the first Sunday of each month [2, 3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "bike-share",
+    "baseline_first": true,
+    "answer": "The first 30 minutes of a bike share ride are free, and after that each 15 minutes costs 1.5 NVD [2][3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "bike-share",
+    "baseline_first": false,
+    "answer": "The first 30 minutes of a bike share ride are free, and after that each 15 minutes costs 1.5 NVD [2][3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "school-enrolment",
+    "baseline_first": true,
+    "answer": "The school enrolment deadline in Northvale is 14 March.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "school-enrolment",
+    "baseline_first": false,
+    "answer": "The school enrolment deadline in Northvale is 14 March.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "gull-island-ferry",
+    "baseline_first": true,
+    "answer": "The last ferry back from Gull Island in winter leaves at 19:45.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "gull-island-ferry",
+    "baseline_first": false,
+    "answer": "The last ferry back from Gull Island in winter leaves at 19:45 [2, 3].",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "construction-noise",
+    "baseline_first": true,
+    "answer": "Construction work is allowed from 08:00 to 18:00 on weekdays and from 09:00 to 13:00 on Saturdays.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   },
+   {
+    "slug": "construction-noise",
+    "baseline_first": false,
+    "answer": "Construction work is allowed from 08:00 to 18:00 on weekdays and from 09:00 to 13:00 on Saturdays.",
+    "cited_baseline": true,
+    "cited_structured": true,
+    "cited_distractor": false,
+    "empty": false,
+    "correct": true
+   }
+  ]
+ },
+ "audit_scores": {
+  "baseline": 18,
+  "structured": 100
+ }
+}
