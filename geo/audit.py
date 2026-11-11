@@ -44,7 +44,7 @@ class _Page(HTMLParser):
             self._script_ld, self._buf = True, []
         if tag == "link" and a.get("rel") == "canonical":
             self.canonical = True
-        if tag == "time" and a.get("datetime"):
+        if (tag == "time" and a.get("datetime")) or (a.get("itemprop") or "").lower() == "datepublished":
             self.has_time = True
         if tag == "meta" and (a.get("property") or a.get("name") or "").lower() in (
                 "article:published_time", "datepublished", "date", "pubdate"):
@@ -66,7 +66,12 @@ class _Page(HTMLParser):
 
 
 def _words(text):
-    return [w for w in re.findall(r"[a-z0-9]+", text.lower()) if w not in STOP]
+    # ponytail: 5-letter prefix as a crude stem so Turkish suffixes match (Netanyahu'dan ~ Netanyahu);
+    # swap for a real stemmer if overlap misfires.
+    return [w[:5] for w in re.findall(r"\w+", text.lower()) if w not in STOP]
+
+
+META_LINE = re.compile(r"^\W*\d{1,2}[./ ]\S+[./ ]\d{2,4}|güncellen|updated|published|yayınlanma|^by ", re.I)
 
 
 ARTICLE_TYPES = {"Article", "NewsArticle", "BlogPosting", "ReportageNewsArticle", "AnalysisNewsArticle",
@@ -103,7 +108,7 @@ def check_page(html, robots_txt=None, llms_txt=None, path="/"):
     p = _Page()
     p.feed(html)
     schema = _schema(p.jsonld)
-    first = next((x for x in p.paragraphs if len(x.split()) > 8 and not x.startswith("By ")), "")
+    first = next((x for x in p.paragraphs if len(x.split()) > 8 and not META_LINE.search(x[:60])), "")
     title_words = set(_words(p.h1[0] if p.h1 else p.title))
     overlap = len(title_words & set(_words(first)))
     blocked, blocked_training = [], []
@@ -123,7 +128,8 @@ def check_page(html, robots_txt=None, llms_txt=None, path="/"):
         ("Structured data (JSON-LD)", 2, schema is not None, schema.get("@type") if schema else "none"),
         ("Schema has headline, date and author", 2,
          bool(schema and schema.get("headline") and schema.get("datePublished") and schema.get("author")), ""),
-        ("Publish date in the page", 1, p.has_time or p.meta_date, "time tag" if p.has_time else ("meta tag" if p.meta_date else "none")),
+        ("Publish date in the page", 1, bool(p.has_time or p.meta_date or (schema and schema.get("datePublished"))),
+         "time tag" if p.has_time else ("meta tag" if p.meta_date else ("schema" if schema and schema.get("datePublished") else "none"))),
         ("One H1", 1, len(p.h1) == 1, f"{len(p.h1)} found"),
         ("Answer in the first paragraph", 3,
          0 < len(first.split()) <= 60 and overlap >= 2 and bool(re.search(r"\d", first)),

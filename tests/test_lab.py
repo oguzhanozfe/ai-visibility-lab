@@ -48,6 +48,17 @@ class AuditTest(unittest.TestCase):
         c = audit.check_page('<meta property="article:published_time" content="2026-01-01"><h1>x</h1>')
         self.assertTrue(check(c, "Publish date in the page"))
 
+    def test_turkish_lead_after_date_line(self):
+        html = ("<h1>Adana'da 3.7 büyüklüğünde deprem</h1><p>10.11.2026 - 23:37 | Son Güncellenme: 10.11.2026 - 23:40 "
+                "Haber Merkezi Adana</p><p>AFAD, Adana Aladağ'da 3.7 büyüklüğünde bir depremin meydana geldiğini "
+                "duyurdu; can kaybı bildirilmedi.</p>")
+        self.assertTrue(check(audit.check_page(html), "Answer in the first paragraph"))
+
+    def test_schema_date_counts_as_publish_date(self):
+        html = ('<script type="application/ld+json">{"@type":"NewsArticle","datePublished":"2026-11-10"}</script>'
+                '<h1>x</h1>')
+        self.assertTrue(check(audit.check_page(html), "Publish date in the page"))
+
     def test_web_rejects_non_http(self):
         self.assertIn("http(s)", render("file:///etc/passwd"))
 
